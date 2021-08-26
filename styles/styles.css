@@ -14,7 +14,7 @@ body {
     padding: 0;
     background: var(--gray0);
     color: var(--gray12);
-    font-family: 'Roboto', Arial;
+    font-family: 'Roboto', sans-serif;
     font-size: 16px;
     display: flex;
     flex-direction: column;
@@ -22,6 +22,7 @@ body {
 
 
 .container {
+    box-sizing: border-box;
     width: 1400px;
     margin: 0 auto;
 }
@@ -38,8 +39,8 @@ header .container {
     padding: 40px 0;
 }
 header .logo {
-    font-size: 44px;
-    font-family: 'Sacramento';
+    font-size: 2.75em;
+    font-family: 'Sacramento', serif;
     text-decoration: none;
     color: white;
 }
@@ -123,9 +124,6 @@ footer .icon {
     main article {
         font-size: 0.7em;
     }
-    main article {
-        font-size: 0.7em;
-    }
     main article h1 {
         font-weight: 300;
     }
@@ -139,13 +137,94 @@ footer .icon {
 }
 
 @media only screen and (max-width: 920px) {
+    header {
+        position: unset;
+        top: unset;
+        right: unset;
+        left: unset;
+        z-index: unset;
+    }
+    header .container {
+        display: flex;
+        justify-content: center;
+    }
+
+    main .container {
+        align-items: center;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    main article {
+        margin-top: 0;
+    }
     main .me {
-        height: 80vh;
+        height: unset;
+        width: 80vw;
+    }
+
+    footer {
+        position: unset;
+        bottom: unset;
+        right: unset;
+        left: unset;
+    }
+    footer .container {
+        display: flex;
+        justify-content: center;
     }
 }
 
-@media only screen and (max-width: 850px) {
+@media only screen and (max-width: 640px) {
+    header .logo {
+        font-size: 2em;
+    }
+
+    main article {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 0.5em;
+    }
+    main article p {
+        font-size: 1.25em;
+        letter-spacing: 6px;
+        margin-top: 12px;
+        margin-left: 5px;
+    }
     main .me {
-        height: 80vh;
+        margin-top: -15vw;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    header .logo {
+        font-size: 1.75em;
+    }
+
+    main .container {
+        padding: 0 !important;
+    }
+
+    main article {
+        font-size: 0.4em;
+    }
+    main article p {
+        font-size: 1.5em;
+        letter-spacing: 4px;
+        margin-top: 12px;
+        margin-left: 5px;
+    }
+    main .me {
+        margin-top: -15vw;
+    }
+
+    footer {
+        font-size: 0.8em;
+    }
+    footer p .icon {
+        width: 14px;
+        height: 14px;
     }
 }
