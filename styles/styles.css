@@ -94,8 +94,13 @@ footer .container {
 footer .icon {
     display: inline-flex;
     fill: var(--darkRed);
+    position: relative;
+    margin-top: 10px;
     width: 16px;
     height: 16px;
+}
+footer b {
+    color: var(--darkOrange);
 }
 
 
