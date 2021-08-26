@@ -114,6 +114,19 @@ footer b {
     .container {
         width: 1000px;
     }
+    main article {
+        font-size: 0.85em;
+    }
+    main article h1 {
+        font-weight: 300;
+    }
+    main article p {
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        margin-top: -5px;
+        margin-left: 8px;
+    }
 }
 
 @media only screen and (max-width: 1200px) {
@@ -123,9 +136,6 @@ footer b {
         padding-left: 60px !important;
         padding-right: 60px !important;
     }
-}
-
-@media only screen and (max-width: 1100px) {
     main article {
         font-size: 0.7em;
     }
@@ -141,7 +151,7 @@ footer b {
     }
 }
 
-@media only screen and (max-width: 920px) {
+@media only screen and (max-width: 1040px) {
     header {
         position: unset;
         top: unset;
@@ -201,6 +211,12 @@ footer b {
     main .me {
         margin-top: -15vw;
     }
+
+    footer div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 @media only screen and (max-width: 400px) {
@@ -224,11 +240,7 @@ footer b {
     main .me {
         margin-top: -15vw;
     }
-
-    footer {
-        font-size: 0.8em;
-    }
-    footer p .icon {
+    footer .icon {
         width: 14px;
         height: 14px;
     }
